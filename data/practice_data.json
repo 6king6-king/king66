@@ -1,0 +1,84 @@
+{
+  "sets": [
+    {
+      "set_id": 1,
+      "questions": [
+        {
+          "type": "forbidden_word",
+          "question": "以下哪个词汇在跨境电商平台中属于违规宣传词？",
+          "options": ["最有效", "环保", "可降解", "新款"],
+          "answer": "最有效",
+          "explanation": "「最有效」是平台禁止使用的绝对化用语。"
+        },
+        {
+          "type": "rule_match",
+          "question": "将 充电宝(3C) 销往 欧盟 市场，以下哪项是必须满足的合规要求？",
+          "options": ["CE认证", "无需任何认证", "只需商标注册", "可随意包装"],
+          "answer": "CE认证",
+          "explanation": "欧盟要求电子电器产品必须获得CE认证。"
+        },
+        {
+          "type": "case_analysis",
+          "question": "【案例】卖家销售 充电宝 至 欧盟，因「无UN38.3认证」被处罚。请问该违规行为可能导致什么后果？",
+          "options": ["海关扣押/退运", "仅警告", "罚款100元", "无需处理"],
+          "answer": "海关扣押/退运",
+          "explanation": "缺乏UN38.3认证会导致货物被海关扣押或退运。"
+        },
+        {
+          "type": "risk_judge",
+          "question": "判断风险等级：在商品标题中使用“国家级”一词",
+          "options": ["低风险", "中风险", "高风险", "极高风险"],
+          "answer": "中风险",
+          "explanation": "使用“国家级”属于夸大宣传，中风险违规。"
+        },
+        {
+          "type": "general",
+          "question": "产品包装上必须包含哪些信息才能出口到欧盟？",
+          "options": ["CE标志", "制造商地址", "垃圾桶标志", "以上都是"],
+          "answer": "以上都是",
+          "explanation": "欧盟要求电子电器产品包装需有CE、制造商信息和垃圾桶回收标志。"
+        }
+      ]
+    },
+    {
+      "set_id": 2,
+      "questions": [
+        {
+          "type": "forbidden_word",
+          "question": "以下哪个词汇属于跨境电商违禁词？",
+          "options": ["疗效", "舒适", "耐用", "轻便"],
+          "answer": "疗效",
+          "explanation": "宣称“疗效”涉及医疗功效，属于严重违规。"
+        },
+        {
+          "type": "rule_match",
+          "question": "将 口红(美妆) 销往 美国 市场，必须满足哪项要求？",
+          "options": ["FDA化妆品注册(VoA)", "任意检测报告", "无需任何认证", "只贴英文标签即可"],
+          "answer": "FDA化妆品注册(VoA)",
+          "explanation": "美国FDA要求化妆品进行自愿注册。"
+        },
+        {
+          "type": "case_analysis",
+          "question": "【案例】卖家销售 印有米老鼠T恤 至 全球，因「未获迪士尼授权」被处罚。可能导致什么后果？",
+          "options": ["店铺封禁(TRO)", "仅下架商品", "罚款500元", "无影响"],
+          "answer": "店铺封禁(TRO)",
+          "explanation": "迪士尼IP侵权可能导致临时限制令(TRO)，店铺被封。"
+        },
+        {
+          "type": "risk_judge",
+          "question": "判断风险等级：未提供CE认证销往欧盟",
+          "options": ["低风险", "中风险", "高风险", "极高风险"],
+          "answer": "高风险",
+          "explanation": "缺少CE认证在欧盟属于高风险违规，可能被海关扣押。"
+        },
+        {
+          "type": "general",
+          "question": "以下哪项是出口美国儿童玩具必须的认证？",
+          "options": ["CPSIA", "CE", "RoHS", "CCC"],
+          "answer": "CPSIA",
+          "explanation": "美国CPSIA（消费品安全改进法案）是儿童产品的强制性要求。"
+        }
+      ]
+    }
+  ]
+}

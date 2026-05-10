@@ -1,0 +1,176 @@
+{
+  "rules": [
+    {
+      "name": "绝对化用语违规",
+      "type": "forbidden_word",
+      "risk_level": "中",
+      "keywords": ["最有效", "第一", "绝对", "100%", "永不", "特效", "100%有效", "最", "顶级", "独一无二", "完全", "彻底", "神奇", "万能", "最佳", "最新", "最先进", "首选", "销量冠军", "市场唯一", "专利", "专家推荐", "国家级", "世界级", "最高级", "最大", "唯一"],
+      "message": "商品描述中包含绝对化用语「{word}」，违反多个平台及国家广告法。",
+      "advice": "删除或替换为客观、可验证的描述（如“经测试可续航10小时”）。"
+    },
+    {
+      "name": "CE认证缺失风险",
+      "type": "missing_certification",
+      "risk_level": "高",
+      "markets": ["欧盟"],
+      "product_categories": ["充电宝(3C)", "蓝牙耳机", "小家电"],
+      "required_words": ["CE", "CE认证", "CE marking"],
+      "message": "销往欧盟的电子电器产品必须提供CE认证，商品描述中未提及。",
+      "advice": "在商品详情页明确标注“CE认证”，并上传认证文件。"
+    },
+    {
+      "name": "RoHS指令缺失风险",
+      "type": "missing_certification",
+      "risk_level": "高",
+      "markets": ["欧盟"],
+      "product_categories": ["充电宝(3C)", "电子设备"],
+      "required_words": ["RoHS", "RoHS环保", "有害物质限制"],
+      "message": "欧盟市场要求电子电器产品符合RoHS指令，未在描述中体现。",
+      "advice": "添加RoHS合规声明，并提供检测报告。"
+    },
+    {
+      "name": "UN38.3运输鉴定缺失",
+      "type": "missing_certification",
+      "risk_level": "极高",
+      "markets": ["欧盟", "美国", "东南亚"],
+      "product_categories": ["充电宝(3C)"],
+      "required_words": ["UN38.3", "运输鉴定", "UN38.3报告"],
+      "message": "锂电池产品（含充电宝）空运海运必须通过UN38.3测试。",
+      "advice": "立即联系实验室获取UN38.3测试报告，并在详情页展示摘要。"
+    },
+    {
+      "name": "FCC认证缺失（美国）",
+      "type": "missing_certification",
+      "risk_level": "高",
+      "markets": ["美国"],
+      "product_categories": ["充电宝(3C)", "蓝牙设备"],
+      "required_words": ["FCC", "FCC认证", "FCC ID"],
+      "message": "销往美国的无线电子设备必须取得FCC认证。",
+      "advice": "申请FCC认证，并将FCC ID标注在产品和包装上。"
+    },
+    {
+      "name": "FDA化妆品注册缺失",
+      "type": "missing_certification",
+      "risk_level": "高",
+      "markets": ["美国"],
+      "product_categories": ["口红(美妆)", "护肤品"],
+      "required_words": ["FDA注册", "FDA cosmetics", "化妆品备案"],
+      "message": "美国市场化妆品必须完成FDA自愿注册（VCRP）。",
+      "advice": "登录FDA门户提交化妆品成分声明（CPIS）。"
+    },
+    {
+      "name": "CPNP备案缺失（欧盟化妆品）",
+      "type": "missing_certification",
+      "risk_level": "高",
+      "markets": ["欧盟"],
+      "product_categories": ["口红(美妆)"],
+      "required_words": ["CPNP", "化妆品通报", "CPNP备案"],
+      "message": "欧盟要求化妆品上市前在CPNP系统完成通报。",
+      "advice": "委托合规代理进行CPNP备案，获取通报编号。"
+    },
+    {
+      "name": "纺织品标签法规缺失",
+      "type": "missing_certification",
+      "risk_level": "中",
+      "markets": ["欧盟"],
+      "product_categories": ["纯棉T恤(服装)"],
+      "required_words": ["纺织品标签", "纤维成分", "EU 1007/2011"],
+      "message": "欧盟要求纺织品明确标注纤维成分及百分比。",
+      "advice": "在吊牌或水洗标上标注“100%棉”等具体成分。"
+    },
+    {
+      "name": "CPSIA儿童产品证书缺失",
+      "type": "missing_certification",
+      "risk_level": "极高",
+      "markets": ["美国"],
+      "product_categories": ["童装", "儿童玩具"],
+      "required_words": ["CPSIA", "儿童产品证书", "CPC"],
+      "message": "出口美国的儿童产品（含童装）必须提供CPC证书。",
+      "advice": "进行第三方测试并出具CPC证书。"
+    },
+    {
+      "name": "知识产权侵权风险（迪士尼）",
+      "type": "infringement",
+      "risk_level": "极高",
+      "keywords": ["米老鼠", "迪士尼", "Mickey", "Disney", "冰雪奇缘", "Frozen", "漫威", "Marvel"],
+      "message": "商品名称或描述中使用了迪士尼等知名IP，可能构成商标或版权侵权。",
+      "advice": "立即删除侵权词汇，除非持有正规授权书。"
+    },
+    {
+      "name": "知识产权侵权风险（苹果）",
+      "type": "infringement",
+      "risk_level": "高",
+      "keywords": ["苹果", "Apple", "iPhone", "iPad", "AirPods", "iOS", "MFi"],
+      "message": "未经授权使用苹果公司商标或MFi认证误导描述。",
+      "advice": "避免标题使用“苹果专用”等暗示性词汇，可注明“兼容iPhone”。"
+    },
+    {
+      "name": "知识产权侵权风险（其他知名品牌）",
+      "type": "infringement",
+      "risk_level": "高",
+      "keywords": ["耐克", "Nike", "阿迪达斯", "Adidas", "路易威登", "LV", "古驰", "Gucci", "香奈儿", "Chanel"],
+      "message": "商品可能侵犯第三方商标权。",
+      "advice": "删除未经授权的品牌词，销售自有品牌或获得授权。"
+    },
+    {
+      "name": "化妆品成分违规（欧盟）",
+      "type": "ingredient",
+      "risk_level": "高",
+      "markets": ["欧盟"],
+      "product_categories": ["口红(美妆)"],
+      "keywords": ["对羟基苯甲酸酯", "Paraben", "邻苯二甲酸酯", "Phthalate", "铅", "Lead", "汞", "Mercury"],
+      "message": "检测到化妆品中含有欧盟限制或禁用成分「{word}」。",
+      "advice": "查阅欧盟化妆品法规(EC)1223/2009附录II禁用物质清单，替换为合规原料。"
+    },
+    {
+      "name": "化妆品成分违规（美国）",
+      "type": "ingredient",
+      "risk_level": "高",
+      "markets": ["美国"],
+      "product_categories": ["口红(美妆)"],
+      "keywords": ["汞", "Mercury", "氢醌", "Hydroquinone", "糖皮质激素"],
+      "message": "美国FDA禁止在化妆品中使用或超量使用该成分「{word}」。",
+      "advice": "参考FDA禁用成分清单，调整配方。"
+    },
+    {
+      "name": "纺织品偶氮染料违规",
+      "type": "ingredient",
+      "risk_level": "高",
+      "markets": ["欧盟"],
+      "product_categories": ["纯棉T恤(服装)"],
+      "keywords": ["偶氮", "AZO", "联苯胺", "致癌芳香胺"],
+      "message": "服装面料中可能含有禁用偶氮染料，违反REACH法规。",
+      "advice": "要求供应商提供偶氮染料检测报告，确保未检出。"
+    },
+    {
+      "name": "包装及标签不合规（欧盟）",
+      "type": "packaging",
+      "risk_level": "中",
+      "markets": ["欧盟"],
+      "product_categories": ["充电宝(3C)", "口红(美妆)", "纯棉T恤(服装)"],
+      "required_words": ["垃圾桶标", "WEEE标志", "回收", "垃圾分类"],
+      "message": "产品包装缺少欧盟要求的电子废弃物回收标志（垃圾桶打叉）或包装回收说明。",
+      "advice": "在包装上印刷WEEE指令要求的回收标志，并标注分类收集信息。"
+    },
+    {
+      "name": "加州65警告标签缺失",
+      "type": "packaging",
+      "risk_level": "中",
+      "markets": ["美国"],
+      "product_categories": ["充电宝(3C)", "口红(美妆)"],
+      "required_words": ["加州65", "Prop 65", "警告", "致癌", "生殖危害"],
+      "message": "销往加州的产品若含有特定化学物质，必须张贴Prop 65警告标签。",
+      "advice": "在网页和包装上增加“WARNING: This product contains chemicals known to the State of California to cause cancer and birth defects or other reproductive harm.”"
+    },
+    {
+      "name": "服装易燃性标准缺失",
+      "type": "packaging",
+      "risk_level": "高",
+      "markets": ["美国"],
+      "product_categories": ["纯棉T恤(服装)"],
+      "required_words": ["易燃性测试", "16 CFR 1610", "阻燃"],
+      "message": "美国要求服装（尤其是儿童睡衣）符合16 CFR 1610易燃性标准。",
+      "advice": "进行纺织品易燃性测试，并在Listing中说明合规。"
+    }
+  ]
+}
