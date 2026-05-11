@@ -12,7 +12,19 @@
 header {visibility: hidden;}
 .stApp > header {display: none !important;}
 [data-testid="stSidebar"] { display: none; }
+/* --- 新增：隐藏左下角图标 --- */
+footer {visibility: hidden !important;}
 
+/* 隐藏包含 "Menu" 和 "Deploy" 图标的父容器 */
+footer [data-testid="stStatusWidget"] {
+    visibility: hidden !important;
+    display: none !important;
+}
+
+/* 备用方案：如果上面不生效，强制隐藏 footer 内的所有 SVG 图标 */
+footer svg {
+    display: none !important;
+}
 /* 主内容区 */
 .main .block-container {
     padding-top: 0rem !important;
