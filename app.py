@@ -9,7 +9,16 @@ import random
 from typing import Dict, List, Any
 from PIL import Image  
 import pytesseract   
-
+st.markdown("""
+<style>
+/* 隐藏右上角三点菜单 */
+.stDeployButton {visibility: hidden;}
+/* 隐藏底部Made with Streamlit水印 */
+footer {visibility: hidden;}
+/* 隐藏右上角Running状态提示 */
+.stStatus {visibility: hidden;}
+</style>
+""", unsafe_allow_html=True)
 if os.name == 'nt':  # Windows
     pytesseract.pytesseract.tesseract_cmd = r'E:\test\xc\tesseract.exe'
 # ================= 文件路径配置 =================
